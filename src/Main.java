@@ -2,6 +2,7 @@ import br.com.alura.screemacth.calculo.CalculadoraDeTempo;
 import br.com.alura.screemacth.calculo.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Pessoa;
 import br.com.alura.screenmatch.modelos.Serie;
 import java.util.ArrayList;
 
@@ -48,6 +49,25 @@ public class Main
 
         System.out.println("Tamanho da lista - " + listaDeFilmes.size());
         System.out.println("Nome do primeiro item da lista - " + listaDeFilmes.get(0).getNome());
+        System.out.println("Nome do primeiro item da lista - " + listaDeFilmes.get(0).toString());
+        System.out.println(listaDeFilmes);
+
+        ArrayList<Pessoa> listaDePessoas = new ArrayList<Pessoa>();
+        var pessoa01 = new Pessoa();
+        var pessoa02 = new Pessoa();
+
+        pessoa01.setNome("Ventura");
+        pessoa01.setIdade(27);
+
+        pessoa02.setNome("Alex");
+        pessoa02.setIdade(26);
+
+        listaDePessoas.add(pessoa01);
+        listaDePessoas.add(pessoa02);
+
+        System.out.printf("\nTamanho da lista: %d", listaDePessoas.size());
+        System.out.printf("\nA primeira pessoa da lista: %s", listaDePessoas.get(0).toString());
+        System.out.println("\nLista: " + listaDePessoas);
 
 //        novoFilme.avaliarNota(8);
 //        novoFilme.avaliarNota(10);
