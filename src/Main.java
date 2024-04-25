@@ -10,33 +10,33 @@ public class Main
 {
     public static void main(String[] args)
     {
-        var novaSerie = new Serie();
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         var filtro = new FiltroRecomendacao();
         Episodio epp = new Episodio();
 
-        var novoFilme = new Filme("The Batman");
-        novoFilme.setAnoLancamento(2023);
+        var novoFilme = new Filme("The Batman",2023);
+//        novoFilme.setAnoLancamento(2023);
         novoFilme.setDuracaoEmMinutos(120);
         novoFilme.setIncluidoNoPlano(true);
         novoFilme.setDiretor("Matt Reeves");
 
-        Filme novoFilme02 = new Filme("Avatar");
+        Filme novoFilme02 = new Filme("Avatar",2023);
 //        novoFilme02.setNome("Avatar");
-        novoFilme02.setAnoLancamento(2023);
+//        novoFilme02.setAnoLancamento(2023);
         novoFilme02.setDuracaoEmMinutos(200);
         novoFilme02.setIncluidoNoPlano(true);
         novoFilme02.setDiretor("Alex Rocha");
 
-        var novoFilme03 = new Filme("Dogville");
+        var novoFilme03 = new Filme("Dogville",2003);
 //        novoFilme03.setNome("Dogville");
-        novoFilme03.setAnoLancamento(2003);
+//        novoFilme03.setAnoLancamento(2003);
         novoFilme03.setDuracaoEmMinutos(200);
 
         novoFilme03.avaliarNota(10);
 
-        novaSerie.setNome("Lost");
-        novaSerie.setAnoLancamento(2000);
+        var novaSerie = new Serie("Lost",2000);
+//        novaSerie.setNome("Lost");
+//        novaSerie.setAnoLancamento(2000);
         novaSerie.setTemporadas(10);
         novaSerie.setEpisodiosPorTemporada(10);
         novaSerie.setMinutosPorEpisodio(50);
