@@ -10,27 +10,26 @@ public class Main
 {
     public static void main(String[] args)
     {
-        var novoFilme = new Filme();
-        Filme novoFilme02 = new Filme();
-        var novoFilme03 = new Filme();
         var novaSerie = new Serie();
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         var filtro = new FiltroRecomendacao();
         Episodio epp = new Episodio();
 
-        novoFilme.setNome("The Batman");
+        var novoFilme = new Filme("The Batman");
         novoFilme.setAnoLancamento(2023);
         novoFilme.setDuracaoEmMinutos(120);
         novoFilme.setIncluidoNoPlano(true);
         novoFilme.setDiretor("Matt Reeves");
 
-        novoFilme02.setNome("Avatar");
+        Filme novoFilme02 = new Filme("Avatar");
+//        novoFilme02.setNome("Avatar");
         novoFilme02.setAnoLancamento(2023);
         novoFilme02.setDuracaoEmMinutos(200);
         novoFilme02.setIncluidoNoPlano(true);
         novoFilme02.setDiretor("Alex Rocha");
 
-        novoFilme03.setNome("Dogville");
+        var novoFilme03 = new Filme("Dogville");
+//        novoFilme03.setNome("Dogville");
         novoFilme03.setAnoLancamento(2003);
         novoFilme03.setDuracaoEmMinutos(200);
 
