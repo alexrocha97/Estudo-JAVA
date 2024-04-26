@@ -2,12 +2,12 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class MainListas
 {
-    public static void main(String[] args) {
-
+    public static void main(String[] args)
+    {
         var novoFilme = new Filme("The Batman",2023);
         novoFilme.avaliarNota(9);
         Filme novoFilme02 = new Filme("Avatar",2023);
@@ -16,18 +16,22 @@ public class MainListas
         novoFilme03.avaliarNota(10);
         var novaSerie = new Serie("Lost",2000);
 
-        ArrayList<Titulo> lista = new ArrayList<Titulo>();
+        List<Titulo> lista = new LinkedList<Titulo>();
         lista.add(novoFilme);
         lista.add(novoFilme02);
         lista.add(novoFilme03);
         lista.add(novaSerie);
 
-        for (Titulo item: lista)
-        {
-            System.out.println(item.getNome());
-            if (item instanceof Filme filme) {
-                System.out.println("Classificação: " + filme.getClassificacao());
-            }
-        }
+        Collections.sort(lista);
+        lista.sort(Comparator.comparing(Titulo::getAnoLancamento));
+        System.out.println(lista);
+
+//        for (Titulo item: lista)
+//        {
+//            System.out.println(item.getNome());
+//            if (item instanceof Filme filme) {
+//                System.out.println("Classificação: " + filme.getClassificacao());
+//            }
+//        }
     }
 }
